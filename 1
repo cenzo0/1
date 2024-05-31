@@ -1,0 +1,19 @@
+import cmath
+
+def solve_quadratic_equation(a, b, c):
+    discriminant = (b ** 2) - (4 * a * c)
+    if discriminant >= 0:
+        x1 = (-b + cmath.sqrt(discriminant)) / (2 * a)
+        x2 = (-b - cmath.sqrt(discriminant)) / (2 * a)
+        return x1, x2
+    else:
+        # Комплексные корни
+        x1 = (-b + cmath.sqrt(discriminant)) / (2 * a)
+        x2 = (-b - cmath.sqrt(discriminant)) / (2 * a)
+        return x1, x2
+
+a = 1
+b = -3
+c = 2
+solution = solve_quadratic_equation(a, b, c)
+print("Решение:", solution)
